@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="525.0" maxWidth="365.0" minHeight="480.0" minWidth="365.0" prefHeight="525.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addressbook.FXMLDocumentController">
+   <children>
+      <Label layoutX="43.0" layoutY="30.0" text="Name" />
+      <Label layoutX="42.0" layoutY="64.0" text="Phone" />
+      <TextField fx:id="nameField" layoutX="108.0" layoutY="26.0" />
+      <TextField fx:id="phoneField" layoutX="108.0" layoutY="60.0" />
+      <TableView fx:id="table" layoutX="18.0" layoutY="156.0" onMouseClicked="#handleSelectRow" prefHeight="310.0" prefWidth="329.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" editable="false" prefWidth="163.0" text="Name">
+          <cellValueFactory><PropertyValueFactory property="name" />
+          </cellValueFactory>
+        </TableColumn>
+          <TableColumn fx:id="phoneColumn" editable="false" prefWidth="165.0" text="Phone">
+          <cellValueFactory><PropertyValueFactory property="phone" />
+          </cellValueFactory>
+        </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="49.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleAddRow" text="Add row" />
+      <Button fx:id="updateButton" layoutX="136.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleUpdateRow" text="Update row" />
+      <Button layoutX="231.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleDeleteRow" text="Delete row" />
+      <Label fx:id="errorLabel" layoutX="40.0" layoutY="85.0" prefHeight="17.0" prefWidth="287.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveButton" layoutX="271.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="64.0" prefWidth="83.0" text="SAVE Changes" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="18.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleReset" prefHeight="25.0" prefWidth="329.0" text="RESET">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
