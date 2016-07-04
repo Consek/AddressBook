@@ -45,7 +45,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField nameField,phoneField;
 
-    final private String csvFile = "C:\\Users\\Consek\\Documents\\NetBeansProjects\\AddressBook\\src\\AddressBook\\database";
+    final private String csvFile = "Enter path to file";
 
     
     @FXML
